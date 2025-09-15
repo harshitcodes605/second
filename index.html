@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Destination Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <form id="travel-form" class="travel-form" novalidate>
+            <h1>Book Your Dream Trip ✈️</h1>
+
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g., Virat Kohli" required>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="e.g., virat.kohli@gmail.com" required>
+                <small class="error-message"></small>
+            </div>
+            
+            <div class="form-group">
+                <label for="destination">Choose Your Destination</label>
+                <select id="destination" name="destination" required>
+                    <option value="" disabled selected>Select a place</option>
+                    <option value="Ladakh">Ladakh</option>
+                    <option value="Landour">Landour</option>
+                    <option value="Manali">Manali</option>
+                    <option value="Shimla">Shimla</option>
+                    <option value="Kashmir">Kashmir</option>
+                </select>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="departureDate">Departure Date</label>
+                <input type="date" id="departureDate" name="departureDate" required>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="travelers">Number of Travelers</label>
+                <input type="number" id="travelers" name="travelers" min="1" placeholder="e.g., 2" required>
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="requests">Special Requests</label>
+                <textarea id="requests" name="requests" rows="3" placeholder="Any special needs or requests..."></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Sign me up for the travel newsletter!</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Book Now</button>
+        </form>
+    </main>
+</body>
+</html>
