@@ -3,64 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dream Destination Booking</title>
+    <title>Registration form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<main class="container">
+    <form id="registration form" class="registration form">
+        <h1>Register Here, Thrill Awaits🏏🏏</h1>
+        <div class="form">
+            <label for="full name">Full Name</label>
+            <input type="text" id="full name" name="full name" placeholder="Eg. Virat Kohli">
+        </div>
 
-    <main class="container">
-        <form id="travel-form" class="travel-form" novalidate>
-            <h1>Book Your Dream Trip ✈️</h1>
+        <div class="form">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="e.g., virat.kohli@gmail.com">
+        </div>
 
-            <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" name="fullName" placeholder="e.g., Virat Kohli" required>
-                <small class="error-message"></small>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="e.g., virat.kohli@gmail.com" required>
-                <small class="error-message"></small>
-            </div>
-            
-            <div class="form-group">
-                <label for="destination">Choose Your Destination</label>
-                <select id="destination" name="destination" required>
-                    <option value="" disabled selected>Select a place</option>
-                    <option value="Ladakh">Ladakh</option>
-                    <option value="Landour">Landour</option>
-                    <option value="Manali">Manali</option>
-                    <option value="Shimla">Shimla</option>
-                    <option value="Kashmir">Kashmir</option>
+        <div class="form">
+                <label for="speciality">Select your speciality</label>
+                <select id="speciality" name="speciality">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Right hand batsman">Right hand batsman</option>
+                    <option value="Left hand batsman">Left hand batsman</option>
+                    <option value="Right arm fast bowler">Right arm fast bowler</option>
+                    <option value="Left arm fast bowler">Left arm fast bowler</option>
+                    <option value="Medium pacer">Medium pacer</option>
+                    <option value="Off spinner">Off spinner</option>
+                    <option value="Leg spinner">Leg spinner</option>
+                    <option value="Wrist spinner">Wrist spinner</option>
+                    <option value="Wicketkeeper">Wicketkeeper</option>
                 </select>
-                <small class="error-message"></small>
+        </div>
+
+         <div class="form">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="e.g. 9587452138">
+        </div>
+
+            <div class="form">
+                <label for="questions">Questions if any</label>
+                <textarea id="questions" name="questions" placeholder="Any questions....."></textarea>
             </div>
 
-            <div class="form-group">
-                <label for="departureDate">Departure Date</label>
-                <input type="date" id="departureDate" name="departureDate" required>
-                <small class="error-message"></small>
+            <div class="form checkbox-group">
+                <input type="checkbox" id="t&c" name="t&c">
+                <label for="t&c">I accept the Terms and Conditions</label>
             </div>
 
-            <div class="form-group">
-                <label for="travelers">Number of Travelers</label>
-                <input type="number" id="travelers" name="travelers" min="1" placeholder="e.g., 2" required>
-                <small class="error-message"></small>
-            </div>
-
-            <div class="form-group">
-                <label for="requests">Special Requests</label>
-                <textarea id="requests" name="requests" rows="3" placeholder="Any special needs or requests..."></textarea>
-            </div>
-
-            <div class="form-group checkbox-group">
-                <input type="checkbox" id="newsletter" name="newsletter">
-                <label for="newsletter">Sign me up for the travel newsletter!</label>
-            </div>
-
-            <button type="submit" class="submit-btn">Book Now</button>
-        </form>
-    </main>
+            <button type="register" class="register-button">Register now!</button>
+    </form>
+</main>
 </body>
 </html>

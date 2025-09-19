@@ -5,19 +5,18 @@
 }
 
 body {
-    background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2070') repeat-x center/cover;
+    background: url('https://wallpapercave.com/wp/wp9536226.jpg');
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    animation: backgroundPan 30s linear infinite;
-    background-size: 200% auto; /* Makes the image larger to see movement */
+    animation: backgroundPan 10s linear infinite;
+    background-size:200%auto; 
 }
-
 @keyframes backgroundPan {
     0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
+    100% { background-position: 50% 100%; }
 }
 
 
@@ -25,18 +24,18 @@ body {
     padding: 20px;
 }
 
-.travel-form {
+.form {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     padding: 2.5rem 3rem;
-    border-radius: 15px;
+    border-radius: 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     width: 100%;
     max-width: 500px;
-    animation: formFadeIn 1s ease-out forwards;
+    animation: fade 1s ease-out forwards;
 }
 
-@keyframes formFadeIn {
+@keyframes fade {
     from {
         opacity: 0;
         transform: translateY(-20px);
@@ -47,27 +46,28 @@ body {
     }
 }
 
-.travel-form h1 {
+.form h1 {
     text-align: center;
     margin-bottom: 1.5rem;
     font-weight: 600;
     color: #005A8D;
 }
 
-.form-group {
+.form{
     margin-bottom: 1.25rem;
     position: relative;
 }
 
-.form-group label {
+.form label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 400;
+    font-size: 1.25rem;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.form input,
+.form select,
+.form textarea {
     width: 100%;
     padding: 0.75rem 1rem;
     border: 1px solid #ccc;
@@ -77,9 +77,9 @@ body {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
     outline: none;
     border-color: #0077B6;
     box-shadow: 0 0 5px rgba(0, 119, 182, 0.3);
@@ -95,23 +95,7 @@ body {
     width: auto;
 }
 
-.form-group .error-message {
-    color: #D90429;
-    font-size: 0.8rem;
-    display: none;
-    margin-top: 5px;
-}
-
-.form-group.error input,
-.form-group.error select {
-    border-color: #D90429;
-}
-
-.form-group.error .error-message {
-    display: block;
-}
-
-.submit-btn {
+.register-button {
     width: 100%;
     padding: 0.8rem;
     background: linear-gradient(90deg, #0077B6, #005A8D);
@@ -122,19 +106,4 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.submit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 90, 141, 0.4);
-}
-
-@media (max-width: 600px) {
-    .travel-form {
-        padding: 2rem 1.5rem;
-    }
-
-    .travel-form h1 {
-        font-size: 1.5rem;
-    }
 }
